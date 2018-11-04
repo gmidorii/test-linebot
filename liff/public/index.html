@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LIFF Test</title>
+</head>
+<body>
+	<div id="root">
+	<button id="lf-button">hoge</button>
+  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+	<script>
+		let userId = ''
+		liff.init(
+			data => {
+				userId = data.context.userId
+			},
+			err => {
+				console.log(err)
+			}
+		)
+		const bt = document.querySelector('#lf-button')
+		bt.addEventListener('click', async () => {
+			try {
+					await liff.sendMessages([
+						{
+							type: 'text',
+							text: `Hi ${userId}!!`
+						}
+					])
+			} catch (error) {
+				window.alert(error)
+			}
+		})
+		</script>
+	</body>
+	</html>
