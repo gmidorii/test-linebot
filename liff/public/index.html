@@ -7,32 +7,12 @@
   <title>LIFF Test</title>
 </head>
 <body>
-	<div id="root">
-	<button id="lf-button">hoge</button>
-  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-	<script>
-		let userId = ''
-		liff.init(
-			data => {
-				userId = data.context.userId
-			},
-			err => {
-				console.log(err)
-			}
-		)
-		const bt = document.querySelector('#lf-button')
-		bt.addEventListener('click', async () => {
-			try {
-					await liff.sendMessages([
-						{
-							type: 'text',
-							text: `Hi ${userId}!!`
-						}
-					])
-			} catch (error) {
-				window.alert(error)
-			}
-		})
-		</script>
-	</body>
-	</html>
+	<div id="root"></div>
+
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+	<script src="bundle.js"></script>
+
+</body>
+</html>
