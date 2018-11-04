@@ -1,8 +1,11 @@
+# LIFF App
 
+## Overview
+LIFF App in React.js.
 
-## 追加方法
+## LIFF
 
-### curlでの追加
+### Add LIFF from curl.
 ```sh
 curl -X POST https://api.line.me/liff/v1/apps \
 -H "Authorization: Bearer {channel access token}" \
