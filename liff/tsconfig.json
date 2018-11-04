@@ -5,7 +5,10 @@
     "noImplicitAny": false,
     "module": "commonjs",
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types/"
+    ]
   },
   "include": [
     "./src/**/*"

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as liff from '../liff/liff'
+import * as style from '../styles/form.css'
 
 export interface FormProps {}
 export interface FormState {
@@ -28,7 +29,7 @@ export class Form extends React.Component<FormProps, FormState> {
 
   render = () => {
     return (
-      <div>
+      <div className={style.hoge}>
         <input
           type="text"
           value={this.state.textValue}
